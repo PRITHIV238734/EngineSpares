@@ -1,27 +1,27 @@
-import React from 'react';
-import Navigation from './components/Navbar';
-import Hero from './components/Hero';
-import Products from './components/Products';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Navigation from "./components/Navbar";
+import HomeComponents from "./components/HomeComponents";
+import Products from "./components/Products";
+import Address from "./components/Address";
+import Payment from "./components/Payment";
+import Orders from "./components/Orders";
+
 
 function App() {
   return (
-     
-    
-    
     <>
-      <Navigation />
-      <Hero />
-      <Products />
-      <About />
-      <Contact />
-      <Footer />
-
+      <Navigation /> {/* Navbar always visible */}
+       {/* Footer always visible */}
+      <Routes>
+        <Route path="/" element={<HomeComponents />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/address" element={<Address />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/orders" element={<Orders />} />
+      </Routes>
     </>
-   
   );
 }
 

@@ -4,7 +4,7 @@ import './Hero.css';
 
 export default function Hero() {
   const heroStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL}/images/hero-bg.jpg)`, // PUBLIC_URL ensures React finds it
+    backgroundImage: `url(${process.env.PUBLIC_URL}/images/hero-bg.jpg)`,
     height: "80vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <div style={heroStyle}>
+    <div style={heroStyle} id="home">
       <div className="hero-overlay"></div>
       <Container className="text-center hero-content">
         <h1>Welcome to Engine Spares</h1>
